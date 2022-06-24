@@ -12,12 +12,13 @@ export default function Header() {
       />
       <div
         className='text-lg'
-        tabindex='0'
+        tabIndex='0'
+        aria-label='Username'
       >
         {user.github_display_name}
       </div>
 
-      <button 
+      <button
         className='ml-auto bg-white py-2 px-4 rounded-lg text-rds-primary hover:bg-slate-400'
       >
         Logout
