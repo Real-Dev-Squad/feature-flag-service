@@ -1,6 +1,12 @@
+import Table from "./Components/Table/Table";
+
 function App() {
   return (
-   <h1 className="text-3xl font-bold underline">Hey</h1>
+    <main 
+      className='flex flex-col items-center'
+    >
+      <Table />
+    </main>
   );
 }
 
