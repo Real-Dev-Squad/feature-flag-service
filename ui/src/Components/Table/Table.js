@@ -1,8 +1,17 @@
 import TableHeader from "../TableHeader/TableHeader";
 import TableItem from "../TableItem/TableItem";
-import { featureFlags } from "./Mock";
+import { featureFlagsMock } from "./Mock";
+import { useState } from 'react';
 
 export default function Table() {
+  const [featureFlags, setFeatureFlags] = useState(featureFlagsMock);
+
+  function toggleFeatureFlag(featureFlagIndex) {
+    const newFeatureFlags = [...featureFlags];
+    newFeatureFlags[featureFlagIndex].enabled = !newFeatureFlags[featureFlagIndex].enabled;
+    setFeatureFlags(newFeatureFlags);
+  }
+
   return (
     <div
       className='py-2 rounded shadow rounded-3xl max-w-5xl'
@@ -17,8 +26,8 @@ export default function Table() {
         </thead>
 
         <tbody>
-          {featureFlags.map(featureFlag =>
-            <TableItem featureFlag={featureFlag} key={featureFlag.id} />
+          {featureFlags.map((featureFlag, index) =>
+            <TableItem featureFlag={featureFlag} key={featureFlag.id} toggle={() => toggleFeatureFlag(index)}/>
           )}
         </tbody>
       </table>

@@ -1,4 +1,4 @@
-export const featureFlags = [
+export const featureFlagsMock = [
   {
     id: 1,
     name: 'Dark Mode',
