@@ -1,9 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const FeatureFlagModel = require('../models/FeatureFlag.js');
+const router = express.Router();
 
-/* GET home page. */
+/* GET FeatureFlags */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  FeatureFlagModel.find({}, function(err, flags) {
+    res.json(flags);
+ });
 });
 
 module.exports = router;
