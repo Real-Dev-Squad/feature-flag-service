@@ -6,8 +6,8 @@ const FeatureFlagSchema = schema({
         type: String,
         require: true
     },
-    roleUsers: {
-        type: String,
+    role: {
+        type: Array,
         require: true
     },
     isEnable: {
