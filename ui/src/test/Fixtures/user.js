@@ -1,4 +1,4 @@
-export const user = { 
+export const USER = { 
   "id": "EYNHBSK7riBKY775OOMB", 
   "instagram_id": "pallab_sonowal20", 
   "status": "active", 
@@ -9,7 +9,7 @@ export const user = {
   "roles": { 
     "member": true 
   }, 
-  "yoe": -5, 
+  "yoe": 1, 
   "picture": { 
     "url": "https://res.cloudinary.com/realdevsquad/image/upload/v1649837643/profile/EYNHBSK7riBKY775OOMB/mfzbgspqgvj6unz34unm.jpg", 
     "publicId": "profile/EYNHBSK7riBKY775OOMB/mfzbgspqgvj6unz34unm" 

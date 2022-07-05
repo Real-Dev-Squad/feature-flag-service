@@ -1,28 +1,23 @@
-import { user } from './Mock';
+import Image from '../Global/Image/Image';
+import Button from '../Global/Button/Button';
 
-export default function Header() {
+export default function Header({ user }) {
   return (
     <header
       className='py-2 px-8 h-20 flex items-center bg-rds-primary text-slate-100'
     >
-      <img
+      <Image
         src={user.picture.url}
-        className='rounded-full h-12 block mx-2'
-        alt='User Picture'
       />
-      <div
-        className='text-lg'
-        tabIndex='0'
-        aria-label='Username'
-      >
-        {user.github_display_name}
-      </div>
 
-      <button
-        className='ml-auto bg-white py-2 px-4 rounded-lg text-rds-primary hover:bg-slate-400'
-      >
-        Logout
-      </button>
+      <h1 className='text-lg'>
+        {user.github_display_name}
+      </h1>
+
+      <Button
+        className={'ml-auto bg-white text-rds-primary hover:bg-slate-400'}
+        text={'Logout'}
+      />
     </header>
   )
 }
