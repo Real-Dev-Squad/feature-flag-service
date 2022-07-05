@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Test Header component Should match the snapshot 1`] = `
+<div>
+  <header
+    class="py-2 px-8 h-20 flex items-center bg-rds-primary text-slate-100"
+  >
+    <img
+      class="rounded-full h-12 block mx-2"
+      src="https://res.cloudinary.com/realdevsquad/image/upload/v1649837643/profile/EYNHBSK7riBKY775OOMB/mfzbgspqgvj6unz34unm.jpg"
+    />
+    <h1
+      class="text-lg"
+    >
+      Pallab Sonowal
+    </h1>
+    <button
+      class="py-2 px-4 rounded-lg ml-auto bg-white text-rds-primary hover:bg-slate-400"
+    >
+      Logout
+    </button>
+  </header>
+</div>
+`;
+
 exports[`Test Header component should match the snapshot 1`] = `
 <div>
   <header

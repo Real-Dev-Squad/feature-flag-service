@@ -1,33 +1,38 @@
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom'
 import Header from '../components/Header/Header';
+import { USER } from './Fixtures/user';
 
 describe("Test Header component", () => {
     
     beforeEach(() => {
-        render(<Header />);
+        render(<Header user={USER}/>);
     })
 
-    it("should have image tag",() =>{
+    it("Should have image tag", () => {
         const imageElement = screen.getByRole('img');
         expect(imageElement).toBeInTheDocument();
     })
 
-    // to mock this data we have to make a img component that 
-    // will accept src and alt as props
-    it("should have src tag",() =>{
-        const MOCK_IMG_SRC = "https://res.cloudinary.com/realdevsquad/image/upload/v1649837643/profile/EYNHBSK7riBKY775OOMB/mfzbgspqgvj6unz34unm.jpg";
-        const imageElement = screen.getByRole('img',{ 'src': MOCK_IMG_SRC});
+    it("Should have src tag", () => {
+        const MOCK_IMG_SRC = USER.picture.url;
+        const imageElement = screen.getByRole('img', { 'src': MOCK_IMG_SRC });
         expect(imageElement).toBeInTheDocument();
     })
 
-    it("should have alt tag",() =>{
-        const MOCK_IMG_ALT = "User Picture";
-        const imageElement = screen.getByRole('img', { 'alt': MOCK_IMG_ALT});
-        expect(imageElement).toBeInTheDocument();
+    it("Should have heading username", () => {
+        const username = USER.github_display_name;
+        const headingElement = screen.getByRole('heading');
+        expect(headingElement).toHaveTextContent(username);
     })
 
-    it("should match the snapshot",() =>{
-        const { container } = render(<Header />);
-        expect(container).toMatchSnapshot();
+    it("Should have logout button", () => {
+        const logoutButton = screen.getByRole('button');
+        expect(logoutButton).toHaveTextContent('Logout');
+    })
+
+    it("Should match the snapshot", () =>{
+      const { container } = render(<Header user={USER}/>);
+      expect(container).toMatchSnapshot();
     })
 })
