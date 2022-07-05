@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const indexRouter = require('./routes/index');
+const indexRouter = require('./routes/fetchFeatureFlags');
 const FeatureFlagRouter = require('./routes/featureFlag');
 const app = express();
 
@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 const db = require("./db/db");
 
-app.use('/featureflags', indexRouter, FeatureFlagRouter);
+app.use('/featureflags', indexRouter);
 app.use('/featureflag', FeatureFlagRouter);
 
 // catch 404 and forward to error handler
