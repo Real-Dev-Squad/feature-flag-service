@@ -5,6 +5,7 @@ const fetchFeatureFlags = async (req, res) => {
   try{
     FeatureFlagModel.find({}, function(err, flags) {
       res.json(flags);
+      res.send();
    });
   }
   catch(err){

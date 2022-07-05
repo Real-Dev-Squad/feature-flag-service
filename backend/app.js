@@ -7,6 +7,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const indexRouter = require('./routes/fetchFeatureFlags');
 const FeatureFlagRouter = require('./routes/featureFlag');
+const findFeatureFlagRouter = require('./routes/findFeatureFlag');
 const app = express();
 
 // view engine setup
@@ -24,6 +25,7 @@ const db = require("./db/db");
 
 app.use('/featureflags', indexRouter);
 app.use('/featureflag', FeatureFlagRouter);
+app.use('/featureflags/:flagName',findFeatureFlagRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

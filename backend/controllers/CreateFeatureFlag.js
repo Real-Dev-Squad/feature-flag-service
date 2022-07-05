@@ -6,6 +6,7 @@ const createFeatureFlag = async (req, res) => {
         if(req.body !== undefined){
             const feature = new FeatureFlagModel(req.body);
             feature.save(); 
+            res.send();
         }
     }
     catch(err){
