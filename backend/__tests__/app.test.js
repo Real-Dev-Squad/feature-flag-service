@@ -23,6 +23,6 @@ describe("create and get feature flags", () => {
         await supertest(app).get(`/featureflag/${flagName}`).expect(404)
     })
     it("should return 404 for incorrect POST request", async () => {
-        await supertest(app).post("/featureflags").expect(404);
+        await supertest(app).post("/featureflag").expect(404);
     })
 })
