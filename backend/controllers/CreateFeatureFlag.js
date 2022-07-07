@@ -9,7 +9,7 @@ const createFeatureFlag = async (req, res) => {
         }
     }
     catch(err){
-        return `There is an error: ${err}`
+        res.send(err)
     }
 }
 
