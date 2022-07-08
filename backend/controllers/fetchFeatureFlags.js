@@ -3,7 +3,7 @@ const FeatureFlagModel = require('../models/FeatureFlag');
 /* GET Feature Flags */
 const fetchFeatureFlags = async (req, res) => {
   try{
-    FeatureFlagModel.find({}, function(err, flags) {
+    FeatureFlagModel.find({}, function(flags) {
       res.json(flags);
 
    });

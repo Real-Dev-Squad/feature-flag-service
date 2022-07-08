@@ -17,7 +17,7 @@ router.put('/:id', editFeatureFlag);
 /* Find Feature Flag */
 router.put('/:id', findFeatureFlag);
 
-/* GET Feature Flags */
+/* Delete Feature Flags */
 // router.delete('/:id', fetchFeatureFlags);
 
 
