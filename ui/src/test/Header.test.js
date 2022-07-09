@@ -20,6 +20,11 @@ describe("Test Header component", () => {
         expect(imageElement).toBeInTheDocument();
     })
 
+    it("Should have heading at top level", () => {
+        const headingElement = screen.getByRole('heading', { level: 1 });
+        expect(headingElement).toBeInTheDocument();
+    })
+
     it("Should have heading username", () => {
         const username = USER.github_display_name;
         const headingElement = screen.getByRole('heading');
