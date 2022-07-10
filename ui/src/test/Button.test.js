@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import Button from "../components/Global/Button/Button";
 import sinon from 'sinon';
 
-describe("Button", () => {
+describe("Button Component", () => {
 
   it("Should render the button", () => {
       render(<Button />)
