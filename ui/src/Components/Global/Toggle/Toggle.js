@@ -6,6 +6,7 @@ export default function Toggle({ onClick, active }) {
       <input
         type='checkbox'
         className='hidden'
+        checked={active}
         onClick={onClick}
       />
       <span

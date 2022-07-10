@@ -1,4 +1,4 @@
-import Toggle from "../Global/Toggle/Toggle"
+import Toggle from "../../Global/Toggle/Toggle"
 
 export default function TableRow({ featureFlag, headers }) {
   return (
