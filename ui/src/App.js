@@ -1,5 +1,5 @@
 import Dashboard from "./Components/Dashboard/Dashboard";
-import { FEATURE_FLAGS } from "./test/Fixtures/featureFlags";
+import { FEATURE_FLAGS } from "./Tests/Fixtures/featureFlags";
 
 function App() {
   return (
