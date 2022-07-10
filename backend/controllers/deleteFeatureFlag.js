@@ -4,8 +4,8 @@ const FeatureFlagModel = require('../models/FeatureFlag');
 const editFeatureFlag = async (req, res) => {
     try{
         const { id } = req.params;
-
-        if(req.body !== undefined){
+        
+        if(id !== undefined){
             const deleteRecord = await FeatureFlagModel.findByIdAndRemove(id);
             res.send(deleteRecord);
         }
