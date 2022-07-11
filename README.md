@@ -47,6 +47,7 @@ Admin can login to the feature-flag with all 'admin' rights. In addition to the 
 | **Enable/disable** | ✅ | ✅ |
 | **Search** | ✅ | ✅ |
 | **Access RDS-level flags** | ✅ | ❎ |
+| **Can add new memebers** |  |  |
 
 ### Tech Stack
 
@@ -62,6 +63,7 @@ Admin can login to the feature-flag with all 'admin' rights. In addition to the 
 
 ### Architetcure
 
+![archiecture](./archiecture-flow.jpg)
 
 ## Design (WIP)
 
