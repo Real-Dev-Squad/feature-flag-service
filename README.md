@@ -65,6 +65,12 @@ Admin can login to the feature-flag with all 'admin' rights. In addition to the 
 
 ![archiecture](./archiecture-flow.jpg)
 
+### API Endpoints
+
+### CI/CD
+
+### Deployment
+
 ## Design (WIP)
 
 ![HLD](./HLD.png)
