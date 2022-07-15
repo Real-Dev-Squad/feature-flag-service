@@ -6,10 +6,12 @@ export default function TableRow({ featureFlag, headers }) {
       className='border-t'
     >
       {headers.map((heading, index) =>
-        <td className='px-4 py-2' key={index}>{featureFlag[heading]}</td>
+        <td className='px-4 py-2' key={index}>
+          <span>{featureFlag[heading]}</span>
+        </td>
       )}
       <td className='px-4 py-2'>
-        <Toggle 
+        <Toggle
           active={featureFlag.enabled}
         />
       </td>
