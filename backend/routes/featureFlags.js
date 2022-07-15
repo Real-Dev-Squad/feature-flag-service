@@ -3,6 +3,7 @@ const fetchFeatureFlags = require('../controllers/fetchFeatureFlags');
 const editFeatureFlag = require('../controllers/editFeatureFlag');
 const createFeatureFlag = require('../controllers/createFeatureFlag');
 const findFeatureFlag = require('../controllers/findFeatureFlag');
+const deleteFeatureFlag = require('../controllers/deleteFeatureFlag');
 const router = express.Router();
 
 /* GET Feature Flags */
@@ -18,7 +19,7 @@ router.put('/:id', editFeatureFlag);
 router.put('/:id', findFeatureFlag);
 
 /* Delete Feature Flags */
-// router.delete('/:id', fetchFeatureFlags);
+router.delete('/:id', deleteFeatureFlag);
 
 
 module.exports = router;
