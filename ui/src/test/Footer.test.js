@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Footer from './../Components/Footer/Footer';
+import { FOOTER} from '../Constant/constant'
 
 describe("Footer component", () => {
     it("Should render footer component",() => {
@@ -8,13 +9,13 @@ describe("Footer component", () => {
 
     it("Should have RDS Website Link", () => {
         render(<Footer />);
-        const RDSLink = screen.getByRole('link',{ name: 'RDS Website' });
+        const RDSLink = screen.getByRole('link',{ name: FOOTER.RDS_WEBSITE });
         expect(RDSLink).toBeInTheDocument();
     })
 
     it("Should have RDS Discord Link", () => {
         render(<Footer />);
-        const RDSLink = screen.getByRole('link',{ name: 'Discord server' });
+        const RDSLink = screen.getByRole('link',{ name: FOOTER.DISCORD_SERVER });
         expect(RDSLink).toBeInTheDocument();
     })
 
@@ -26,7 +27,12 @@ describe("Footer component", () => {
 
     it("Should have copyright text", () => {
         render(<Footer />);
-        const copyrightLink = screen.getByText('Copyright 2022-2023');
+        const copyrightLink = screen.getByText(FOOTER.COPYRIGHT);
         expect(copyrightLink).toBeInTheDocument();
     })
+
+    it("Should match the snapshot", () =>{
+        const { container } = render(<Footer />);
+        expect(container).toMatchSnapshot();
+      })
 })
