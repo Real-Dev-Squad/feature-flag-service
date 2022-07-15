@@ -8,6 +8,11 @@ In RDS, currently there is no 'feature-flag' service.Feature-flag helps develope
 
 Create an end-to-end feature-flag management system for RDS to create, and use the feature-flag(s).
 
+## Important links:
+
+[Miro](https://miro.com/app/board/uXjVOuQvmxU=/)
+[Identity service]()
+
 ## How?
 
 The feature-flag management system will have 3 parts:
