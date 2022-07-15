@@ -1,4 +1,5 @@
 import Dashboard from "./Components/Dashboard/Dashboard";
+import Footer from "./Components/Footer/Footer";
 import { FEATURE_FLAGS, FEATURE_FLAGS_HEADERS} from "./Mock/featureFlags";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         featureFlags={FEATURE_FLAGS} 
         headers={FEATURE_FLAGS_HEADERS}
       />
+      <Footer />
     </main>
   );
 }
