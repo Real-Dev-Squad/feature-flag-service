@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Image from '../components/Global/Image/Image'
+import Image from '../Components/Global/Image/Image'
 
 describe("Image Component", () => {
 

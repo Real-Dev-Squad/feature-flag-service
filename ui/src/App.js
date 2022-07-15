@@ -1,8 +1,16 @@
-import Header from "./components/Header/Header";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import { FEATURE_FLAGS, FEATURE_FLAGS_HEADERS} from "./Mock/featureFlags";
 
 function App() {
   return (
-    <div>Hey</div>
+    <main 
+      className='flex flex-col items-center'
+    >
+      <Dashboard 
+        featureFlags={FEATURE_FLAGS} 
+        headers={FEATURE_FLAGS_HEADERS}
+      />
+    </main>
   );
 }
 

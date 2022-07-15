@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import Button from "../components/Global/Button/Button";
+import Button from "../Components/Global/Button/Button";
 import sinon from 'sinon';
 
 describe("Button Component", () => {
