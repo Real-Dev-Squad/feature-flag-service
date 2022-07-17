@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer component Should match the snapshot 1`] = `
+<div>
+  <footer
+    class="my-8 w-screen flex justify-center text-xs"
+  >
+    <span
+      class="ml-2"
+    >
+      Copyright 2022-2023
+    </span>
+    <a
+      class="ml-2 hover:underline"
+      href="#"
+    >
+      RDS Website
+    </a>
+    <a
+      class="ml-2 hover:underline"
+      href="#"
+    >
+      Discord server
+    </a>
+  </footer>
+</div>
+`;
