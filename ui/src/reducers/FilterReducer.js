@@ -4,9 +4,9 @@ import {
   CLEAR_FILTER,
   LOADING,
   FILTER_LIST,
-} from '../actions/actions';
+} from '../Actions/filters.action';
 
-export function filterReducer(state, action) {
+export function FilterReducer(state, action) {
   switch (action.type) {
     case LOADING:
       return { ...state, isLoading: true };
@@ -26,21 +26,28 @@ export function filterReducer(state, action) {
 
     case FILTER_LIST:
       let { featureList } = state;
-      let { userInput, status } = state.filters;
+      let { userSearchInput, featureStatus } = state.filters;
 
       let tempList = [...featureList];
 
-      if (userInput) {
+      if (userSearchInput) {
         tempList = tempList.filter(
           (value) =>
-            value.createdBy.toLowerCase().includes(userInput.toLowerCase()) ||
-            value.featureFlag.toLowerCase().includes(userInput.toLowerCase()) ||
-            value.repository.toLowerCase().includes(userInput.toLowerCase())
+            value.createdBy
+              .toLowerCase()
+              .includes(userSearchInput.toLowerCase()) ||
+            value.featureFlag
+              .toLowerCase()
+              .includes(userSearchInput.toLowerCase()) ||
+            value.repository
+              .toLowerCase()
+              .includes(userSearchInput.toLowerCase())
         );
       }
-      if (status !== 'all') {
-        tempList = tempList.filter((value) => String(value.enabled) === status);
-        console.log(tempList, 'status', status);
+      if (featureStatus !== 'all') {
+        tempList = tempList.filter(
+          (value) => String(value.enabled) === featureStatus
+        );
       }
       return { ...state, filteredList: tempList };
 
@@ -48,10 +55,11 @@ export function filterReducer(state, action) {
       return {
         ...state,
         filters: {
-          userInput: '',
-          status: 'all',
+          userSearchInput: '',
+          featureStatus: 'all',
         },
       };
+
     default:
       return { ...state };
   }

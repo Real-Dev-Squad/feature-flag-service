@@ -1,13 +1,13 @@
 import { createContext, useContext, useEffect, useReducer } from 'react';
 import { FEATURE_FLAGS, FEATURE_FLAGS_HEADERS } from '../Mock/featureFlags';
-import { filterReducer } from '../reducers/filter_reducer';
+import { FilterReducer } from '../reducers/FilterReducer';
 import {
   UPDATE_FILTERS,
   FETCH_LIST,
   CLEAR_FILTER,
   LOADING,
   FILTER_LIST,
-} from '../actions/actions';
+} from '../Actions/filters.action';
 
 const FilterContext = createContext(null);
 
@@ -17,19 +17,19 @@ const initialState = {
   filteredList: [],
   featureFlagHeader: [],
   filters: {
-    userInput: '',
-    status: 'all',
+    userSearchInput: '',
+    featureStatus: 'all',
   },
 };
 
 const FilterContextProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(filterReducer, initialState);
+  const [state, dispatch] = useReducer(FilterReducer, initialState);
 
   function updateFilters(name, value) {
     dispatch({ type: UPDATE_FILTERS, payload: { name, value } });
   }
 
-  function clearFilter() {
+  function clearFilters() {
     dispatch({ type: CLEAR_FILTER });
   }
 
@@ -47,13 +47,13 @@ const FilterContextProvider = ({ children }) => {
   }, [state.filters]);
 
   return (
-    <FilterContext.Provider value={{ ...state, updateFilters, clearFilter }}>
+    <FilterContext.Provider value={{ ...state, updateFilters, clearFilters }}>
       {children}
     </FilterContext.Provider>
   );
 };
 
-export function useFilterContext() {
+export function useFilter() {
   return useContext(FilterContext);
 }
 

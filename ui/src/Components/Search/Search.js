@@ -1,12 +1,11 @@
-import { useState, useCallback } from 'react';
-import { FEATURE_FLAGS } from '../../Mock/featureFlags';
-import { useFilterContext } from '../../Context/filter_context';
+import { useFilter } from '../../Context/FilterContext';
+import { SEARCH } from '../../Constants/constants';
 
 export default function Search() {
   const {
-    filters: { userInput },
+    filters: { userSearchInput },
     updateFilters,
-  } = useFilterContext();
+  } = useFilter();
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -14,7 +13,7 @@ export default function Search() {
   };
 
   return (
-    <section className='mb-2 sm:w-96  flex justify-center items-center'>
+    <section className='m-2 sm:w-96  flex justify-center items-center'>
       <input
         type='text'
         className='
@@ -37,10 +36,10 @@ export default function Search() {
         placeholder-gray-300::placeholder
         placeholder-opacity-25
       '
-        name='userInput'
-        value={userInput}
+        name={SEARCH.NAME}
+        value={userSearchInput}
         onChange={handleInputChange}
-        placeholder='Search issues by Name, Createdby, Repository...'
+        placeholder={SEARCH.PLACEHOLDER}
       />
     </section>
   );
