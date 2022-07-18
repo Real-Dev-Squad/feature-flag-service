@@ -1,9 +1,8 @@
 import Dashboard from './Components/Dashboard/Dashboard';
 import Footer from './Components/Footer/Footer';
-import { useState } from 'react';
 import Filters from './Components/Filters/Filters';
 import Search from './Components/Search/Search';
-import { useFilterContext } from './Context/filter_context';
+import { useFilter } from './Context/FilterContext';
 import { FEATURE_FLAGS, FEATURE_FLAGS_HEADERS } from './Mock/featureFlags';
 
 function App() {
