@@ -3,3 +3,7 @@ export const FOOTER = {
   RDS_WEBSITE: 'RDS Website',
   DISCORD_SERVER: 'Discord server',
 };
+export const SEARCH = {
+  NAME: 'userSearchInput',
+  PLACEHOLDER: 'Search issues by Name, Createdby, Repository',
+};

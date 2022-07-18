@@ -1,5 +1,5 @@
 import { useFilter } from '../../Context/FilterContext';
-import { SEARCH } from '../../Constants/constants';
+import { SEARCH } from '../../Constant/constant';
 
 export default function Search() {
   const {
