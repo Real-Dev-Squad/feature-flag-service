@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useReducer } from 'react';
 import { FEATURE_FLAGS, FEATURE_FLAGS_HEADERS } from '../Mock/featureFlags';
-import { FilterReducer } from '../reducers/FilterReducer';
+import { FilterReducer } from '../Reducers/FilterReducer';
 import {
   UPDATE_FILTERS,
   FETCH_LIST,
