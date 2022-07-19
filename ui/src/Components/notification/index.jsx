@@ -1,4 +1,3 @@
-import styles from "./notification.module.css";
 import { useState } from "react";
 
 /**
@@ -32,12 +31,17 @@ export const { subscribe, publish: NotificationHandler } = NotificationQue();
  * @param {{message : string, type : string}} data the structure of notification that has to be passed down to the NotificationHandler
  */
 export const NotificationElement = ({ data }) => {
+  const typeToColor = {
+    success: "rgb(95, 214, 95)",
+    warning: "rgb(238, 241, 41)",
+    error: "rgb(253, 81, 81)",
+  };
+
   return (
     <div
       data-testid="notification-child"
-      className={
-        styles.notification + " " + styles[`notification-${data.type}`]
-      }
+      className="flex justify-start items-center min-w-full w-max bg-white font-['Helvetica', 'sans-serif'] font-medium text-base capitalize rounded px-2.5 py-1.5"
+      style={{ backgroundColor: `${typeToColor[data.type]}` }}
     >
       <h3>{data.message}</h3>
     </div>
@@ -59,7 +63,7 @@ const NotificationParent = ({ timeout = 2000 }) => {
 
     setTimeout(() => {
       setNotifications((prev) => {
-        let [firstAlert, ...data] = prev;
+        let [_, ...data] = prev;
         return data;
       });
     }, timeout);
@@ -68,7 +72,7 @@ const NotificationParent = ({ timeout = 2000 }) => {
   return (
     <div
       data-testid="notification-parent"
-      className={styles.wrapper}
+      className="flex justify-center items-center flex-col-reverse fixed top-4 w-max gap-2 transition-[height] duration-300 ease-[cubic-bezier(0.165, 0.84, 0.44, 1)]"
       //this piece of code will increase or decrease the height of the wrapper accr to the no. of notifications present
       style={{ height: `${notifications.length * 2.5}rem` }}
     >
