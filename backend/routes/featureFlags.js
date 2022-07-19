@@ -15,11 +15,10 @@ router.post('/:flagname', createFeatureFlag);
 /* Edit Feature Flag */
 router.put('/:id', editFeatureFlag);
 
-/* Find Feature Flag */
-router.put('/:id', findFeatureFlag);
-
 /* Delete Feature Flags */
 router.delete('/:id', deleteFeatureFlag);
 
+/* find Feature Flags */
+router.get('/:id', findFeatureFlag);
 
 module.exports = router;
