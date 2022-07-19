@@ -1,7 +1,7 @@
 const FeatureFlagModel = require('../models/FeatureFlag');
 
 /* Edit Feature Flag */
-const editFeatureFlag = async (req, res) => {
+const deleteFeatureFlag = async (req, res) => {
     try{
         const { id } = req.params;
         
@@ -15,4 +15,4 @@ const editFeatureFlag = async (req, res) => {
     }
 }
 
-module.exports = editFeatureFlag;
+module.exports = deleteFeatureFlag;
