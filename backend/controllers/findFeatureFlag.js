@@ -4,7 +4,11 @@ const FeatureFlagModel = require('../models/FeatureFlag');
 const findFeatureFlags = async (req, res) => {
     const { flagName } = req.params;
   try{
-    FeatureFlagModel.findOne({flagName}, function(err, flag) {
+    FeatureFlagModel.findOne({name : flagName}, function(err, flag) {
+      if(flag === null){
+        res.status(404).json("404");
+        return false;
+      }
         res.json(flag);
         res.send();
    });

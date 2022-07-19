@@ -16,13 +16,13 @@ describe("create and get feature flags", () => {
         await supertest(app).get(`/featureflags`).expect(200)
     })
     it("should throw 404 for accessing wrong URL", async () => {
-        await supertest(app).get(`/featureflag`).expect(404)
+        await supertest(app).get(`/featureflas`).expect(404)
     })
     it("should return 404 if flag is not there ", async () => {
-        const flagName = 'mock';
-        await supertest(app).get(`/featureflag/${flagName}`).expect(404)
+        const flagName = 123;
+        await supertest(app).get(`/featureflags/${flagName}`).expect(404)
     })
     it("should return 404 for incorrect POST request", async () => {
-        await supertest(app).post("/featureflag").expect(404);
+        await supertest(app).post("/featureflags").expect(404);
     })
 })
