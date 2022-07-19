@@ -10,7 +10,7 @@ const router = express.Router();
 router.get('/', fetchFeatureFlags);
 
 /* POST Feature Flags */
-router.post('/:flagname', createFeatureFlag);
+router.post('/', createFeatureFlag);
 
 /* Edit Feature Flag */
 router.put('/:id', editFeatureFlag);
