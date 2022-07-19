@@ -9,6 +9,10 @@ on:
   pull_request:
     branches: [ "develop" ]
 
+defaults:
+ run:
+  working-directory: ./backend
+
 jobs:
   build:
 
