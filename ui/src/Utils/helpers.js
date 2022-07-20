@@ -22,7 +22,7 @@ export default function searchFilter(list, userSearchInput = '') {
       value.createdBy.toLowerCase().includes(userSearchInput.toLowerCase()) ||
       // Filter by featureFlag status
       value.featureFlag.toLowerCase().includes(userSearchInput.toLowerCase()) ||
-      // Filter by Repository
+      // Filter by Repository Name
       value.repository.toLowerCase().includes(userSearchInput.toLowerCase())
   );
 }
