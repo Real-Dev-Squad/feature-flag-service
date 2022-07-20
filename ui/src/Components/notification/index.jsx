@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { TYPETOCOLOR } from "../../Constant/constant";
 
 /**
- * a pubsub kinda implementation, basically it will save a function in closure with varaible called "fn"
+ * a pubsub kind of implementation, basically it will save a function in closure with varaible called "fn"
  * when i use a function called subcribe and pass it with the function i want to save
  * then when i will call publish function with "data" parameter it will call the function present in "fn"
  * with the "data" as a arguement
@@ -31,17 +32,11 @@ export const { subscribe, publish: NotificationHandler } = NotificationQue();
  * @param {{message : string, type : string}} data the structure of notification that has to be passed down to the NotificationHandler
  */
 export const NotificationElement = ({ data }) => {
-  const typeToColor = {
-    success: "rgb(95, 214, 95)",
-    warning: "rgb(238, 241, 41)",
-    error: "rgb(253, 81, 81)",
-  };
-
   return (
     <div
       data-testid="notification-child"
       className="flex justify-start items-center min-w-full w-max bg-white font-['Helvetica', 'sans-serif'] font-medium text-base capitalize rounded px-2.5 py-1.5"
-      style={{ backgroundColor: `${typeToColor[data.type]}` }}
+      style={{ backgroundColor: `${TYPETOCOLOR[data.type]}` }}
     >
       <h3>{data.message}</h3>
     </div>
@@ -55,7 +50,7 @@ const NotificationParent = ({ timeout = 2000 }) => {
    *whenever someone call the NotificationHandler with data for the alert this function will be called from
    * the pubsub closure
    * then the data will be pushed to the ending of the notification array with state update
-   * also at the same time a setTimeout will be runned which will remove the first entry from
+   * also at the same time a setTimeout will be run which will remove the first entry from
    * the notification array after "timeout" secs
    */
   subscribe((alert) => {
