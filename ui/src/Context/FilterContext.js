@@ -11,7 +11,7 @@ import {
 
 const FilterContext = createContext(null);
 
-const initialState = {
+export const initialState = {
   isLoading: true,
   featureList: [],
   filteredList: [],

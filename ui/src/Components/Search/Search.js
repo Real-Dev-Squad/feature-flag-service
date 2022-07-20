@@ -40,6 +40,9 @@ export default function Search() {
         value={userSearchInput}
         onChange={handleInputChange}
         placeholder={SEARCH.PLACEHOLDER}
+        autoComplete='off'
+        autoCapitalize='off'
+        autoCorrect='off'
       />
     </section>
   );

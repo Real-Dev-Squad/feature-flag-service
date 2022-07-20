@@ -1,4 +1,5 @@
 import { useFilter } from '../../Context/FilterContext';
+import { FEATURE_STATUS } from '../../Constant/constant';
 
 export default function Filters() {
   const {
@@ -20,9 +21,13 @@ export default function Filters() {
         name='featureStatus'
         onChange={onValueChange}
       >
-        <option value='all'>Both</option>
-        <option value='true'>Enabled</option>
-        <option value='false'>Disabled</option>
+        {FEATURE_STATUS.map((status, idx) => {
+          return (
+            <option value={status.value} key={idx}>
+              {status.name}
+            </option>
+          );
+        })}
       </select>
     </section>
   );

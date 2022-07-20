@@ -5,6 +5,16 @@ import {
   LOADING,
   FILTER_LIST,
 } from '../Actions/filters.action';
+import searchFilter from '../Utils/helpers';
+import { FEATURE_STATUS } from '../Constant/constant';
+import { initialState } from '../Context/FilterContext';
+
+/**
+ * @function reducer to update state automatically when dispatch is called
+ * @param state {object} previous state
+ * @param action {object} type and payload properties
+ * @return {object} new state
+ */
 
 export function FilterReducer(state, action) {
   switch (action.type) {
@@ -31,18 +41,7 @@ export function FilterReducer(state, action) {
       let tempList = [...featureList];
 
       if (userSearchInput) {
-        tempList = tempList.filter(
-          (value) =>
-            value.createdBy
-              .toLowerCase()
-              .includes(userSearchInput.toLowerCase()) ||
-            value.featureFlag
-              .toLowerCase()
-              .includes(userSearchInput.toLowerCase()) ||
-            value.repository
-              .toLowerCase()
-              .includes(userSearchInput.toLowerCase())
-        );
+        tempList = searchFilter(tempList, userSearchInput);
       }
       if (featureStatus !== 'all') {
         tempList = tempList.filter(
@@ -52,11 +51,15 @@ export function FilterReducer(state, action) {
       return { ...state, filteredList: tempList };
 
     case CLEAR_FILTER:
+      // Get default status from initialState
+      const {
+        filters: { featureStatus: status },
+      } = initialState;
       return {
         ...state,
         filters: {
           userSearchInput: '',
-          featureStatus: 'all',
+          featureStatus: status,
         },
       };
 

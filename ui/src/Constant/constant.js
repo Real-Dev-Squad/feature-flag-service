@@ -7,3 +7,18 @@ export const SEARCH = {
   NAME: 'userSearchInput',
   PLACEHOLDER: 'Search issues by Name, Createdby, Repository',
 };
+
+export const FEATURE_STATUS = [
+  {
+    name: 'Both',
+    value: 'all',
+  },
+  {
+    name: 'Enabled',
+    value: true,
+  },
+  {
+    name: 'Disabled',
+    value: false,
+  },
+];
