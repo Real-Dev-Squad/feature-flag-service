@@ -1,4 +1,4 @@
-import { fireEvent,userEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import Toggle from '../Components/Global/Toggle/Toggle'
 import sinon from 'sinon';
 
@@ -25,13 +25,13 @@ describe("Toggle Component", () => {
     expect(checkbox).not.toHaveAttribute("checked");
   })
 
-  it.skip("Should fire event on click", async () => {
+  it("Should fire event on click", async () => {
     const mockFn = sinon.spy();
-    render(<Toggle changeHandler={mockFn}/>)
+    render(<Toggle onClick={mockFn}/>)
 
     const checkbox = screen.getByRole('checkbox')
     await fireEvent.click(checkbox);
-    expect(mockFn).toBeCall();
+    expect(mockFn.callCount).toEqual(1);
     
   })
 
