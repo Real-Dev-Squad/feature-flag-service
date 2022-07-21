@@ -31,8 +31,8 @@ describe("Toggle Component", () => {
 
     const checkbox = screen.getByRole('checkbox')
     await fireEvent.click(checkbox);
-
     expect(mockFn.callCount).toEqual(1);
+    
   })
 
 }) 

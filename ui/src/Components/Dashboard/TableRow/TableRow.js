@@ -13,6 +13,7 @@ export default function TableRow({ featureFlag, headers }) {
       <td className='px-4 py-2'>
         <Toggle
           active={featureFlag.enabled}
+          
         />
       </td>
     </tr>
