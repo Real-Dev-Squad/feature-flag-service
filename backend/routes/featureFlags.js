@@ -10,16 +10,15 @@ const router = express.Router();
 router.get('/', fetchFeatureFlags);
 
 /* POST Feature Flags */
-router.post('/:flagname', createFeatureFlag);
+router.post('/', createFeatureFlag);
 
 /* Edit Feature Flag */
 router.put('/:id', editFeatureFlag);
 
-/* Find Feature Flag */
-router.put('/:id', findFeatureFlag);
-
 /* Delete Feature Flags */
 router.delete('/:id', deleteFeatureFlag);
 
+/* find Feature Flags */
+router.get('/:id', findFeatureFlag);
 
 module.exports = router;
