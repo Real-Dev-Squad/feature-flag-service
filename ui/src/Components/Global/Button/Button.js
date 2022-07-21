@@ -7,4 +7,4 @@ export default function Button({ text, onClick, className}) {
       {text}
     </button>
   )
-}
+};
