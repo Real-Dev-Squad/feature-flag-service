@@ -1,12 +1,12 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { act } from "react-dom/test-utils";
 
 import NotificationParent, {
   NotificationHandler,
-  NotificationElement,
   NotificationQue,
 } from "../Components/notification";
+import { TYPE_TO_COLOR } from "../Constant/constant";
 
 describe("notification Functionality", () => {
   it("notification parent renders on the screen", async () => {
@@ -20,18 +20,6 @@ describe("notification Functionality", () => {
     expect(publish(5)).toEqual(50);
   });
 
-  it("check that notification element gets the correct data", async () => {
-    let notificationProps = { message: "Hello World", type: "success" };
-    render(<NotificationElement data={notificationProps} />);
-
-    expect(screen.getByRole("heading", { level: 3 })).toHaveTextContent(
-      notificationProps.message
-    );
-    expect(screen.getByTestId("notification-child")).toHaveClass(
-      `notification-${notificationProps.type}`
-    );
-  });
-
   it("checking the whole function cycle of the notification feature", async () => {
     render(<NotificationParent timeout={1000} />);
 
@@ -41,11 +29,15 @@ describe("notification Functionality", () => {
       NotificationHandler(notificationProps);
     });
 
+    let notificationChild = await waitFor(() =>
+      screen.getByTestId("notification-child")
+    );
+
+    expect(notificationChild.style.backgroundColor).toEqual(
+      TYPE_TO_COLOR[notificationProps.type]
+    );
     expect(screen.getByRole("heading", { level: 3 })).toHaveTextContent(
       notificationProps.message
-    );
-    expect(screen.getByTestId("notification-child")).toHaveClass(
-      `notification-${notificationProps.type}`
     );
   });
 });

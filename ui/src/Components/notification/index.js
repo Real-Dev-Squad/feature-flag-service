@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { TYPETOCOLOR } from "../../Constant/constant";
+import { NOTIFICATION_TIMEOUT, TYPE_TO_COLOR } from "../../Constant/constant";
 
 /**
  * a pubsub kind of implementation, basically it will save a function in closure with varaible called "fn"
- * when i use a function called subcribe and pass it with the function i want to save
- * then when i will call publish function with "data" parameter it will call the function present in "fn"
+ * when we use a function called subcribe and pass it with the function we want to save
+ * then, when we will call publish function with "data" parameter it will call the function present in "fn"
  * with the "data" as a arguement
  */
 export const NotificationQue = () => {
@@ -36,14 +36,14 @@ export const NotificationElement = ({ data }) => {
     <div
       data-testid="notification-child"
       className="flex justify-start items-center min-w-full w-max bg-white font-['Helvetica', 'sans-serif'] font-medium text-base capitalize rounded px-2.5 py-1.5"
-      style={{ backgroundColor: `${TYPETOCOLOR[data.type]}` }}
+      style={{ backgroundColor: `${TYPE_TO_COLOR[data.type]}` }}
     >
       <h3>{data.message}</h3>
     </div>
   );
 };
 
-const NotificationParent = ({ timeout = 2000 }) => {
+const NotificationParent = () => {
   const [notifications, setNotifications] = useState([]);
 
   /*
@@ -61,7 +61,7 @@ const NotificationParent = ({ timeout = 2000 }) => {
         let [_, ...data] = prev;
         return data;
       });
-    }, timeout);
+    }, NOTIFICATION_TIMEOUT);
   });
 
   return (
