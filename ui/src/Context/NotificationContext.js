@@ -1,7 +1,10 @@
 import { createContext, useContext, useState } from "react";
 import { NOTIFICATION_TIMEOUT } from "../Constant/constant";
 
-export const NotificationContext = createContext();
+export const NotificationContext = createContext({
+  createNotifcation() {},
+  notificationQue: [],
+});
 
 export const useNotificationContext = () => useContext(NotificationContext);
 
