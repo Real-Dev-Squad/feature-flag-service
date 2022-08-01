@@ -3,9 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@lhci/cli": "^0.9.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "dotenv": "^16.0.1",
     "eslint": "^8.17.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -13,11 +15,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts start --mode=develoment",
+    "build": "react-scripts build --mode=production",
     "test-watch": "react-scripts test --coverage",
     "test": "react-scripts test --watchAll=false",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ci: lighthouse": "lhci autorun"
   },
   "eslintConfig": {
     "extends": [
