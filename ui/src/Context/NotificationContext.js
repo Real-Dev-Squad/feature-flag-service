@@ -3,19 +3,23 @@ import { NOTIFICATION_TIMEOUT } from "../Constant/constant";
 
 export const NotificationContext = createContext({
   createNotifcation() {},
-  notificationQue: [],
+  notificationQueue: [],
 });
 
 export const useNotificationContext = () => useContext(NotificationContext);
 
 const NotificationProvider = ({ children }) => {
-  const [notificationQue, setNotificationQue] = useState([]);
+  const [notificationQueue, setNotificationQueue] = useState([]);
 
-  const createNotifcation = (notificationData) => {
-    setNotificationQue((prev) => [...prev, notificationData]);
+  /**
+   *
+   * @param {type : string, message : string} notificationContent
+   */
+  const createNotifcation = (notificationContent) => {
+    setNotificationQueue((prev) => [...prev, notificationContent]);
 
     setTimeout(() => {
-      setNotificationQue((prev) => {
+      setNotificationQueue((prev) => {
         let [_, ...data] = prev;
         return data;
       });
@@ -24,7 +28,7 @@ const NotificationProvider = ({ children }) => {
 
   return (
     <NotificationContext.Provider
-      value={{ createNotifcation, notificationQue }}
+      value={{ createNotifcation, notificationQueue }}
     >
       {children}
     </NotificationContext.Provider>
