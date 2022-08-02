@@ -1,4 +1,4 @@
-import Toggle from "../../Global/Toggle/Toggle"
+import Toggle from "../../../Global/Toggle/Toggle"
 
 export default function TableRow({ featureFlag, headers }) {
   return (
@@ -7,7 +7,7 @@ export default function TableRow({ featureFlag, headers }) {
     >
       {headers.map((heading, index) =>
         <td className='px-4 py-2' key={index}>
-          <span>{featureFlag[heading]}</span>
+          <span>{featureFlag[heading.headerName]}</span>
         </td>
       )}
       <td className='px-4 py-2'>
