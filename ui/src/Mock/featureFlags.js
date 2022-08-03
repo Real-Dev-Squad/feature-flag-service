@@ -26,9 +26,6 @@ export const FEATURE_FLAGS = [
     createdAt: 1657868240983,
     modifiedAt: 1657868807983,
   },
-]
+];
 
-export const FEATURE_FLAGS_HEADERS = [
-  'featureFlag', 
-  'repository',
-]
+export const FEATURE_FLAGS_HEADERS = ['featureFlag', 'repository'];
