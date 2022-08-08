@@ -1,6 +1,7 @@
 import PreviousMap from "postcss/lib/previous-map"
 import {camelCaseToNormal} from "../../../../Utils/helpers"
 import SortCursor from "./SortCursor"
+import { TABLE } from "../../../../Constant/constant"
 
 export default function TableHeader({headers,handleSorting}) {
   return (
@@ -17,7 +18,7 @@ export default function TableHeader({headers,handleSorting}) {
             </th>
             <th>
             {heading.sortable  ?
-             <SortCursor handleSorting={handleSorting}/>
+             <SortCursor handleSorting={handleSorting} header={heading.headerName}/>
              :""
              }
             </th>
@@ -25,7 +26,7 @@ export default function TableHeader({headers,handleSorting}) {
             </th>
         )}
 
-        <th className='p-4'>Enabled</th>
+        <th className='p-4'>{TABLE.ENABLED}</th>
       </tr>
     </thead>
   )

@@ -37,7 +37,7 @@ export const FEATURE_FLAGS_HEADERS = [
   },
   {
     headerName:'repository',
-    sortable:false,
+    sortable:true,
     searchable:true
   },
   {
