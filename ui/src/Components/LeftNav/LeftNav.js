@@ -1,20 +1,21 @@
-import { NAV } from '../../Constant/constant';
+import { Link } from "react-router-dom";
+import { NAV, PATH } from '../../Constant/constant';
 
 export default function LeftNav(){
     return(
         <nav>
             <ul>
                 <li>
-                    {NAV.FLAGS}
+                    <Link to={PATH.HOME}>{NAV.FLAGS}</Link>
                 </li>
                 <li>
-                    {NAV.CREATE_USERS}
+                    <Link to={PATH.CREATE_USERS}>{NAV.CREATE_USERS}</Link>
                 </li>
                 <li>
-                    {NAV.DOCS}
+                    <Link to={PATH.DOCS}>{NAV.DOCS}</Link>
                 </li>
                 <li>
-                    {NAV.SDK}
+                    <Link to={PATH.SDK}>{NAV.SDK}</Link>
                 </li>
             </ul>
         </nav>

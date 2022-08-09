@@ -11,3 +11,11 @@ export const NAV = {
     "SDK" : "SDK",
     "DOCS" : "Docs",
 }
+
+export const PATH = {
+    "HOME" : "/",
+    "CREATE_USERS" : "createusers",
+    "FLAGS" : "flags",
+    "SDK" : "sdk",
+    "DOCS" : "docs",
+}
