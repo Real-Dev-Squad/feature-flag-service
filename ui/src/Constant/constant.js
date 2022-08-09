@@ -3,3 +3,11 @@ export const FOOTER = {
     "RDS_WEBSITE": "RDS Website",
     "DISCORD_SERVER":"Discord server"
 }
+
+export const NAV = {
+    "HOME" : "Home",
+    "CREATE_USERS" : "Create Users",
+    "FLAGS" : "Flags",
+    "SDK" : "SDK",
+    "DOCS" : "Docs",
+}

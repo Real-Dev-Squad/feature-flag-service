@@ -1,18 +1,15 @@
 import Dashboard from "./Components/Dashboard/Dashboard";
-import Footer from "./Components/Footer/Footer";
+import Layout from "./Components/Layout/Layout";
 import { FEATURE_FLAGS, FEATURE_FLAGS_HEADERS} from "./Mock/featureFlags";
 
 function App() {
   return (
-    <main 
-      className='flex flex-col items-center'
-    >
-      <Dashboard 
+    <Layout>
+       <Dashboard 
         featureFlags={FEATURE_FLAGS} 
         headers={FEATURE_FLAGS_HEADERS}
       />
-      <Footer />
-    </main>
+    </Layout>
   );
 }
 

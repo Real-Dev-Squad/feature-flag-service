@@ -6,12 +6,12 @@ export default function Header({ user }) {
     <header
       className='py-2 px-8 h-20 flex items-center bg-rds-primary text-slate-100'
     >
-      <Image
+      {/* <Image
         src={user.picture.url}
-      />
+      /> */}
 
       <h1 className='text-lg'>
-        {user.github_display_name}
+        name
       </h1>
 
       <Button
