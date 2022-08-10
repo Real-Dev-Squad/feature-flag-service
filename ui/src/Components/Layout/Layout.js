@@ -6,7 +6,7 @@ export default function Layout(props){
     return(
         <>
         <Header />
-            <main className='flex flex-row items-center'>
+            <main className='flex flex-row my-4'>
                 <LeftNav />
                 <section> 
                     {props.children}
