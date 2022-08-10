@@ -12,13 +12,13 @@ exports[`Footer component Should match the snapshot 1`] = `
     </span>
     <a
       class="ml-2 hover:underline"
-      href="#"
+      href="http://www.google.com"
     >
       RDS Website
     </a>
     <a
       class="ml-2 hover:underline"
-      href="#"
+      href="http://www.google.com"
     >
       Discord server
     </a>
