@@ -1,4 +1,4 @@
-import { TYPE_TO_COLOR } from "../../Constant/constant";
+import { NOTIFICATION_TEXT_COLOR } from "../../Constant/constant";
 import { useNotificationContext } from "../../Context/NotificationContext";
 
 const NotificationParent = () => {
@@ -18,11 +18,11 @@ const NotificationParent = () => {
           className="flex justify-start items-center min-w-full w-max bg-white font-['Helvetica', 'sans-serif'] font-medium text-base capitalize rounded px-2.5 py-1.5"
           style={{
             backgroundColor: `${
-              TYPE_TO_COLOR[notification.type.toUpperCase()]
+              NOTIFICATION_TEXT_COLOR[notification.type.toUpperCase()]
             }`,
           }}
         >
-          <h3>{notification.message}</h3>
+          <h3 role={"alert"}>{notification.message}</h3>
         </div>
       ))}
     </div>

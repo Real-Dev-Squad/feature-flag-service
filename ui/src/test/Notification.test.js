@@ -2,7 +2,10 @@ import { render, screen, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 
 import NotificationParent from "../Components/notification";
-import { NOTIFICATION_TIMEOUT, TYPE_TO_COLOR } from "../Constant/constant";
+import {
+  NOTIFICATION_TIMEOUT,
+  NOTIFICATION_TEXT_COLOR,
+} from "../Constant/constant";
 import { NotificationContext } from "../Context/NotificationContext";
 import React from "react";
 
@@ -61,7 +64,7 @@ describe("Notification Component", () => {
       screen.getByTestId("notificationchild")
     );
     expect(notificationChild.style.backgroundColor).toEqual(
-      TYPE_TO_COLOR[notificationContent.type.toUpperCase()]
+      NOTIFICATION_TEXT_COLOR[notificationContent.type.toUpperCase()]
     );
   });
   it("should check if the heading rendered as h3", async () => {

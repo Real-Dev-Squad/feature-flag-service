@@ -20,7 +20,7 @@ const NotificationProvider = ({ children }) => {
 
     setTimeout(() => {
       setNotificationQueue((prev) => {
-        let [_, ...data] = prev;
+        let [, ...data] = prev;
         return data;
       });
     }, NOTIFICATION_TIMEOUT);
