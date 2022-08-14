@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Docs/> component snapshpt should match 1`] = `
+<div>
+  <header
+    class="py-2 px-8 h-20 flex items-center bg-rds-primary text-slate-100"
+  >
+    <img
+      class="rounded-full h-12 block mx-2"
+      src="https://res.cloudinary.com/realdevsquad/image/upload/v1649837643/profile/EYNHBSK7riBKY775OOMB/mfzbgspqgvj6unz34unm.jpg"
+    />
+    <h1
+      class="text-lg"
+    >
+      Pallab Sonowal
+    </h1>
+    <button
+      class="py-2 px-4 rounded-lg ml-auto bg-white text-rds-primary hover:bg-slate-400"
+    >
+      Logout
+    </button>
+  </header>
+  <main
+    class="flex flex-row my-4"
+  >
+    <nav
+      class="px-3"
+    >
+      <ul />
+    </nav>
+    <section>
+      <h1>
+        Docs
+      </h1>
+    </section>
+  </main>
+  <footer
+    class="my-8 w-screen flex justify-center text-xs"
+  >
+    <span
+      class="ml-2"
+    >
+      Copyright 2022-2023
+    </span>
+    <a
+      class="ml-2 hover:underline"
+      href="http://www.google.com"
+    >
+      RDS Website
+    </a>
+    <a
+      class="ml-2 hover:underline"
+      href="http://www.google.com"
+    >
+      Discord server
+    </a>
+  </footer>
+</div>
+`;
