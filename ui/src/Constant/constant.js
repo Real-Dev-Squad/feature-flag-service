@@ -5,11 +5,11 @@ export const FOOTER = {
 }
 
 export const NAV = {
-    "HOME" : "Home",
-    "CREATE_USERS" : "Create Users",
-    "FLAGS" : "Dashboard",
-    "SDK" : "SDK",
-    "DOCS" : "Docs",
+    "Home" : "/",
+    "Create Users" : "/users",
+    "Flags" : "/flags",
+    "SDK" : "/sdk",
+    "Docs" : "/docs",
 }
 
 export const PATH = {
