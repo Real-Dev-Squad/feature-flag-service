@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Sdk/> component snapshpt should match 1`] = `
+exports[`<Sdk/> component snapshot should match 1`] = `
 <div>
   <header
     class="py-2 px-8 h-20 flex items-center bg-rds-primary text-slate-100"
@@ -26,7 +26,58 @@ exports[`<Sdk/> component snapshpt should match 1`] = `
     <nav
       class="px-3"
     >
-      <ul />
+      <ul>
+        <li
+          class="text-blue-600 hover:underline text-sm py-1"
+        >
+          <a
+            href="/"
+          >
+            Home
+          </a>
+           
+        </li>
+        <li
+          class="text-blue-600 hover:underline text-sm py-1"
+        >
+          <a
+            href="/users"
+          >
+            Create Users
+          </a>
+           
+        </li>
+        <li
+          class="text-blue-600 hover:underline text-sm py-1"
+        >
+          <a
+            href="/flags"
+          >
+            Flags
+          </a>
+           
+        </li>
+        <li
+          class="text-blue-600 hover:underline text-sm py-1"
+        >
+          <a
+            href="/sdk"
+          >
+            SDK
+          </a>
+           
+        </li>
+        <li
+          class="text-blue-600 hover:underline text-sm py-1"
+        >
+          <a
+            href="/docs"
+          >
+            Docs
+          </a>
+           
+        </li>
+      </ul>
     </nav>
     <section>
       <h1>

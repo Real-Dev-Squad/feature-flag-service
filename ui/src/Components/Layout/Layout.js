@@ -6,14 +6,14 @@ import { USER } from '../../test/Fixtures/user';
 export default function Layout(props){
     return(
         <>
-        <Header user={USER}/>
+        <Header user={USER} data-testid="h"/>
             <main className='flex flex-row my-4'>
-                <LeftNav />
+                <LeftNav data-testid="ln"/>
                 <section> 
                     {props.children}
                 </section>
             </main>
-        <Footer />
+        <Footer data-testid="f"/>
         </>
     )
 }
