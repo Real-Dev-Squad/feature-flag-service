@@ -6,8 +6,8 @@ export const FOOTER = {
 
 
 export const TABLE = {
-    "ASCENDING":"ASCENDING",
-    "DESCENDING":"DESCENDING",
+    "ASCENDING":"ascending",
+    "DESCENDING":"descending",
     "ENABLED":"Enabled",
 }
 

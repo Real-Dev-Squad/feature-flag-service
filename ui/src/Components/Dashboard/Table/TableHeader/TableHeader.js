@@ -19,7 +19,7 @@ export default function TableHeader({headers,handleSorting}) {
             <th>
             {heading.sortable  ?
              <SortCursor handleSorting={handleSorting} header={heading.headerName}/>
-             :""
+             :null
              }
             </th>
             </tr>
