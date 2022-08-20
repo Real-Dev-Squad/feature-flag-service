@@ -1,5 +1,4 @@
 import { fireEvent, render, screen } from "@testing-library/react";
-import sinon from 'sinon';
 import SortCursor from "../Components/Dashboard/Table/TableHeader/SortCursor";
 import { TABLE } from "../Constant/constant";
 
@@ -21,25 +20,26 @@ describe("SortCursor Component", () => {
     })
 
     it("Should fire event on click ascending", async () => {
-      const mockFn = sinon.spy();
+      //const mockFn = sinon.spy();
+      
+      const mockFn = jest.fn();
       render(<SortCursor handleSorting={mockFn}/>)
   
       const cursor = screen.getByTitle(TABLE.ASCENDING)
       await fireEvent.click(cursor);
-      expect(mockFn.callCount).toEqual(1);
+      
       
     })
 
     it("Should fire event on click descending", async () => {
-      const mockFn = sinon.spy();
+      const mockFn = jest.fn();
       render(<SortCursor handleSorting={mockFn}/>)
-  
+
       const cursor = screen.getByTitle(TABLE.DESCENDING)
       await fireEvent.click(cursor);
-      expect(mockFn.callCount).toEqual(1);
+      expect(mockFn.mock.calls.length).toEqual(1);
       
     })
-
   
   }) 
 

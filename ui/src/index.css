@@ -17,8 +17,6 @@ code {
 }
 
 .up-arrow {
-  width: 0;
-  height: 0;
   border: solid 6px transparent;
   background: transparent;
   border-bottom: solid 7px black;
@@ -26,19 +24,11 @@ code {
   cursor: pointer;
 }
 
-.up-arrow-clicked{
-  width: 0;
-  height: 0;
-  border: solid 6px transparent;
-  background: transparent;
+.clicked-u{
   border-bottom: solid 7px #ad9f9f;
-  border-top-width: 0;
-  cursor: pointer;
 }
 
 .down-arrow{
-  width: 0;
-  height: 0;
   border: solid 6px transparent;
   background: transparent;
   border-top: solid 7px black;
@@ -47,15 +37,8 @@ code {
   cursor: pointer;
 }
 
-.down-arrow-clicked{
-  width: 0;
-  height: 0;
-  border: solid 6px transparent;
-  background: transparent;
+.clicked-d{
   border-top: solid 7px #ad9f9f;
-  border-bottom-width: 0;
-  margin-top:1px;
-  cursor: pointer;
 }
 
 

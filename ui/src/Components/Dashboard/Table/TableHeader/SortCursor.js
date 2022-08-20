@@ -1,37 +1,32 @@
 import { useState } from "react";
-
 import { TABLE } from "../../../../Constant/constant";
 
 export default function SortCursor(props) {
   const [currentClickedCursor, setCurrentClickedCursor] = useState("");
 
-  const onClickUpArrow = (args, headerName) => {
-    setCurrentClickedCursor(TABLE.UPCURSOR);
-    props.handleSorting(TABLE.ASCENDING, headerName);
-  };
-  const onClickDownArrow = (args, headerName) => {
-    setCurrentClickedCursor(TABLE.DOWNCURSOR);
-    props.handleSorting(TABLE.DESCENDING, headerName);
-  };
+  const onCursorClick = (clickedCursorType,headerName) =>{
+    setCurrentClickedCursor(clickedCursorType);
+    props.handleSorting(clickedCursorType, headerName);
+  }
 
   return (
     <div>
       <div
-        className={`up-arrow${
-          currentClickedCursor === TABLE.UPCURSOR ? '-clicked' : ''
+        className={`up-arrow ${
+          currentClickedCursor === TABLE.ASCENDING ? "clicked-u" : ''
         }`}
         title={TABLE.ASCENDING}
-        onClick={(e) => {
-          onClickUpArrow(e, props.header);
+        onClick={() => {
+          onCursorClick(TABLE.ASCENDING, props.header);
         }}
       ></div>
       <div
-        className={`down-arrow${
-          currentClickedCursor === TABLE.DOWNCURSOR ? '-clicked' : ''
+        className={`down-arrow ${
+          currentClickedCursor === TABLE.DESCENDING ? "clicked-d" : ''
         }`}
         title={TABLE.DESCENDING}
         onClick={(e) => {
-          onClickDownArrow(e, props.header);
+          onCursorClick(TABLE.DESCENDING, props.header);
         }}
       ></div>
     </div>

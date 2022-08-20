@@ -1,6 +1,4 @@
 import {useState} from "react"
-
-
 import TableHeader from "./TableHeader/TableHeader"
 import TableRow from "./TableRow/TableRow"
 import { compareValues } from "../../../Utils/helpers"
