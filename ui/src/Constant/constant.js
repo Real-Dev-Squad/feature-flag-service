@@ -3,3 +3,11 @@ export const FOOTER = {
     "RDS_WEBSITE": "RDS Website",
     "DISCORD_SERVER":"Discord server"
 }
+
+
+export const TABLE = {
+    "ASCENDING":"ascending",
+    "DESCENDING":"descending",
+    "ENABLED":"Enabled",
+}
+

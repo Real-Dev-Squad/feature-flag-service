@@ -29,6 +29,20 @@ export const FEATURE_FLAGS = [
 ]
 
 export const FEATURE_FLAGS_HEADERS = [
-  'featureFlag', 
-  'repository',
+
+  {
+    headerName:'featureFlag',
+    sortable:false,
+    searchable:true
+  },
+  {
+    headerName:'repository',
+    sortable:true,
+    searchable:true
+  },
+  {
+    headerName:'createdAt',
+    sortable:true,
+    searchable:true
+  }
 ]
