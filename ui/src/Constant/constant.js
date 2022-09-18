@@ -4,6 +4,15 @@ export const FOOTER = {
     "DISCORD_SERVER":"Discord server"
 }
 
+
+export const TABLE = {
+    "ASCENDING":"ascending",
+    "DESCENDING":"descending",
+    "ENABLED":"Enabled",
+}
+
+
+
 export const NAV = {
     "Home" : "/",
     "Create Users" : "/users",
