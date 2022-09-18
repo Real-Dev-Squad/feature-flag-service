@@ -6,5 +6,9 @@ describe('<Home/> component', () => {
     it('component should render',() => {
         render(<Router><Home /></Router>);
     });
+    it('should match snapshot', () => {
+        const { container } = render(<Router><Home /></Router>);
+        expect(container).toMatchSnapshot();
+    })
     
 })

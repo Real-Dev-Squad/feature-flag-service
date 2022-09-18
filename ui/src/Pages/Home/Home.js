@@ -9,7 +9,7 @@ export default function Home(){
             featureFlags={FEATURE_FLAGS} 
             headers={FEATURE_FLAGS_HEADERS}
             />
-      </Layout>
+       </Layout>
     )
 }
 

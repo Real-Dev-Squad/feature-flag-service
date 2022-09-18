@@ -1,0 +1,248 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home/> component should match snapshot 1`] = `
+<div>
+  <header
+    class="py-2 px-8 h-20 flex items-center bg-rds-primary text-slate-100"
+  >
+    <img
+      class="rounded-full h-12 block mx-2"
+      src="https://res.cloudinary.com/realdevsquad/image/upload/v1649837643/profile/EYNHBSK7riBKY775OOMB/mfzbgspqgvj6unz34unm.jpg"
+    />
+    <h1
+      class="text-lg"
+    >
+      Pallab Sonowal
+    </h1>
+    <button
+      class="py-2 px-4 rounded-lg ml-auto bg-white text-rds-primary hover:bg-slate-400"
+    >
+      Logout
+    </button>
+  </header>
+  <main
+    class="flex flex-row my-4"
+  >
+    <nav
+      class="px-3"
+    >
+      <ul
+        role="list"
+      >
+        <li
+          class="text-blue-600 hover:underline text-sm py-1"
+          role="listitem"
+        >
+          <a
+            aria-current="page"
+            class="active"
+            href="/"
+          >
+            Home
+          </a>
+           
+        </li>
+        <li
+          class="text-blue-600 hover:underline text-sm py-1"
+          role="listitem"
+        >
+          <a
+            class=""
+            href="/users"
+          >
+            Create Users
+          </a>
+           
+        </li>
+        <li
+          class="text-blue-600 hover:underline text-sm py-1"
+          role="listitem"
+        >
+          <a
+            class=""
+            href="/flags"
+          >
+            Flags
+          </a>
+           
+        </li>
+        <li
+          class="text-blue-600 hover:underline text-sm py-1"
+          role="listitem"
+        >
+          <a
+            class=""
+            href="/sdk"
+          >
+            SDK
+          </a>
+           
+        </li>
+        <li
+          class="text-blue-600 hover:underline text-sm py-1"
+          role="listitem"
+        >
+          <a
+            class=""
+            href="/docs"
+          >
+            Docs
+          </a>
+           
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <table
+        class="shadow text-sm text-left table-fixed w-3/4 max-w-screen-md"
+      >
+        <thead>
+          <tr
+            class="text-teal-700 text-xs"
+          >
+            <th
+              class="p-4"
+            >
+              Feature Flag
+            </th>
+            <th
+              class="p-4"
+            >
+              Repository
+            </th>
+            <th
+              class="p-4"
+            >
+              Enabled
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            class="border-t"
+          >
+            <td
+              class="px-4 py-2"
+            >
+              <span>
+                Dark Mode
+              </span>
+            </td>
+            <td
+              class="px-4 py-2"
+            >
+              <span>
+                Member Site
+              </span>
+            </td>
+            <td
+              class="px-4 py-2"
+            >
+              <label
+                class="w-14 h-7 rounded-3xl block relative p-1 ease-in-out duration-300 bg-sky-500"
+              >
+                <input
+                  checked=""
+                  class="hidden"
+                  type="checkbox"
+                />
+                <span
+                  class="w-6 h-full block rounded-3xl bg-white relative ease-in-out duration-300 false"
+                />
+              </label>
+            </td>
+          </tr>
+          <tr
+            class="border-t"
+          >
+            <td
+              class="px-4 py-2"
+            >
+              <span>
+                Cloudinary
+              </span>
+            </td>
+            <td
+              class="px-4 py-2"
+            >
+              <span>
+                Welcome Site
+              </span>
+            </td>
+            <td
+              class="px-4 py-2"
+            >
+              <label
+                class="w-14 h-7 rounded-3xl block relative p-1 ease-in-out duration-300 bg-slate-300"
+              >
+                <input
+                  class="hidden"
+                  type="checkbox"
+                />
+                <span
+                  class="w-6 h-full block rounded-3xl bg-white relative ease-in-out duration-300 translate-x-full"
+                />
+              </label>
+            </td>
+          </tr>
+          <tr
+            class="border-t"
+          >
+            <td
+              class="px-4 py-2"
+            >
+              <span>
+                Get Intro
+              </span>
+            </td>
+            <td
+              class="px-4 py-2"
+            >
+              <span>
+                Member Site
+              </span>
+            </td>
+            <td
+              class="px-4 py-2"
+            >
+              <label
+                class="w-14 h-7 rounded-3xl block relative p-1 ease-in-out duration-300 bg-sky-500"
+              >
+                <input
+                  checked=""
+                  class="hidden"
+                  type="checkbox"
+                />
+                <span
+                  class="w-6 h-full block rounded-3xl bg-white relative ease-in-out duration-300 false"
+                />
+              </label>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <footer
+    class="my-8 w-screen flex justify-center text-xs"
+  >
+    <span
+      class="ml-2"
+    >
+      Copyright 2022-2023
+    </span>
+    <a
+      class="ml-2 hover:underline"
+      href="http://www.google.com"
+    >
+      RDS Website
+    </a>
+    <a
+      class="ml-2 hover:underline"
+      href="http://www.google.com"
+    >
+      Discord server
+    </a>
+  </footer>
+</div>
+`;

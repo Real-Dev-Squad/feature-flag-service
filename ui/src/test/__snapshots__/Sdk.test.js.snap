@@ -34,6 +34,8 @@ exports[`<Sdk/> component snapshot should match 1`] = `
           role="listitem"
         >
           <a
+            aria-current="page"
+            class="active"
             href="/"
           >
             Home
@@ -45,6 +47,7 @@ exports[`<Sdk/> component snapshot should match 1`] = `
           role="listitem"
         >
           <a
+            class=""
             href="/users"
           >
             Create Users
@@ -56,6 +59,7 @@ exports[`<Sdk/> component snapshot should match 1`] = `
           role="listitem"
         >
           <a
+            class=""
             href="/flags"
           >
             Flags
@@ -67,6 +71,7 @@ exports[`<Sdk/> component snapshot should match 1`] = `
           role="listitem"
         >
           <a
+            class=""
             href="/sdk"
           >
             SDK
@@ -78,6 +83,7 @@ exports[`<Sdk/> component snapshot should match 1`] = `
           role="listitem"
         >
           <a
+            class=""
             href="/docs"
           >
             Docs

@@ -1,14 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { Link, MemoryRouter as Router } from 'react-router-dom';
+import { MemoryRouter as Router } from 'react-router-dom';
 import LeftNav from '../Components/LeftNav/LeftNav';
-
-const NAV = {
-    "Home" : "/",
-    "Create Users" : "/users",
-    "Flags" : "/flags",
-    "SDK" : "/sdk",
-    "Docs" : "/docs",
-}
 
 describe('<LeftNav/> component', () => {
     it('component should render',() => {
