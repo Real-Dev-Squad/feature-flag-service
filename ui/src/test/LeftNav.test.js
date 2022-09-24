@@ -1,43 +1,43 @@
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter as Router } from 'react-router-dom';
-import LeftNav from '../Components/LeftNav/LeftNav';
+import Navigation from '../Components/Navigation/Navigation';
 
-describe('<LeftNav/> component', () => {
+describe('<Navigation/> component', () => {
     it('component should render',() => {
-        render(<Router><LeftNav /></Router>);
+        render(<Router><Navigation /></Router>);
     });
     it('should have UL',() => {
-        render(<Router><LeftNav /></Router>);
+        render(<Router><Navigation /></Router>);
         const element = screen.getByRole('list');
         expect(element).toBeInTheDocument();
     });
     it('should have LIs',() => {
-        render(<Router><LeftNav /></Router>);
+        render(<Router><Navigation /></Router>);
         const element = screen.getAllByRole('listitem');
         expect(element).toHaveLength(5);
     });
     it('should have Home',() => {
-        render(<Router><LeftNav /></Router>);
+        render(<Router><Navigation /></Router>);
         const element = screen.getByRole('link',{ name: 'Home', href: '/'});
         expect(element).toBeInTheDocument();
     });
     it('should have Create Users',() => {
-        render(<Router><LeftNav /></Router>);
+        render(<Router><Navigation /></Router>);
         const element = screen.getByRole('link',{ name: 'Create Users', href: '/users'});
         expect(element).toBeInTheDocument();
     });
     it('should have Flags',() => {
-        render(<Router><LeftNav /></Router>);
+        render(<Router><Navigation /></Router>);
         const element = screen.getByRole('link',{ name: 'Flags', href: '/flags'});
         expect(element).toBeInTheDocument();
     });
     it('should have SDK',() => {
-        render(<Router><LeftNav /></Router>);
+        render(<Router><Navigation /></Router>);
         const element = screen.getByRole('link',{ name: 'SDK', href: '/sdk'});
         expect(element).toBeInTheDocument();
     });
     it('should have Docs',() => {
-        render(<Router><LeftNav /></Router>);
+        render(<Router><Navigation /></Router>);
         const element = screen.getByRole('link',{ name: 'Docs', href: '/docs'});
         expect(element).toBeInTheDocument();
     });
