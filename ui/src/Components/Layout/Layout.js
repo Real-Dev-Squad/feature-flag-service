@@ -1,6 +1,6 @@
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import LeftNav from '../LeftNav/LeftNav';
+import Navigation from '../Navigation/Navigation';
 import { USER } from '../../test/Fixtures/user';
 
 export default function Layout(props){
@@ -8,7 +8,7 @@ export default function Layout(props){
         <>
         <Header user={USER} />
             <main className='flex flex-row my-4'>
-                <LeftNav />
+                <Navigation />
                 <section> 
                     {props.children}
                 </section>
