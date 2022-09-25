@@ -26,12 +26,9 @@ exports[`<Home/> component should match snapshot 1`] = `
     <nav
       class="px-3"
     >
-      <ul
-        role="list"
-      >
+      <ul>
         <li
           class="text-blue-600 hover:underline text-sm py-1"
-          role="listitem"
         >
           <a
             aria-current="page"
@@ -40,11 +37,9 @@ exports[`<Home/> component should match snapshot 1`] = `
           >
             Home
           </a>
-           
         </li>
         <li
           class="text-blue-600 hover:underline text-sm py-1"
-          role="listitem"
         >
           <a
             class=""
@@ -52,11 +47,9 @@ exports[`<Home/> component should match snapshot 1`] = `
           >
             Create Users
           </a>
-           
         </li>
         <li
           class="text-blue-600 hover:underline text-sm py-1"
-          role="listitem"
         >
           <a
             class=""
@@ -64,23 +57,19 @@ exports[`<Home/> component should match snapshot 1`] = `
           >
             Flags
           </a>
-           
         </li>
         <li
           class="text-blue-600 hover:underline text-sm py-1"
-          role="listitem"
         >
           <a
             class=""
-            href="/sdk"
+            href="/SDK"
           >
             SDK
           </a>
-           
         </li>
         <li
           class="text-blue-600 hover:underline text-sm py-1"
-          role="listitem"
         >
           <a
             class=""
@@ -88,7 +77,6 @@ exports[`<Home/> component should match snapshot 1`] = `
           >
             Docs
           </a>
-           
         </li>
       </ul>
     </nav>
@@ -100,15 +88,57 @@ exports[`<Home/> component should match snapshot 1`] = `
           <tr
             class="text-teal-700 text-xs"
           >
-            <th
-              class="p-4"
-            >
-              Feature Flag
+            <th>
+              <tr>
+                <th
+                  class="p-4"
+                >
+                  Feature Flag
+                </th>
+                <th />
+              </tr>
             </th>
-            <th
-              class="p-4"
-            >
-              Repository
+            <th>
+              <tr>
+                <th
+                  class="p-4"
+                >
+                  Repository
+                </th>
+                <th>
+                  <div>
+                    <div
+                      class="up-arrow null"
+                      title="ascending"
+                    />
+                    <div
+                      class="down-arrow null"
+                      title="descending"
+                    />
+                  </div>
+                </th>
+              </tr>
+            </th>
+            <th>
+              <tr>
+                <th
+                  class="p-4"
+                >
+                  Created At
+                </th>
+                <th>
+                  <div>
+                    <div
+                      class="up-arrow null"
+                      title="ascending"
+                    />
+                    <div
+                      class="down-arrow null"
+                      title="descending"
+                    />
+                  </div>
+                </th>
+              </tr>
             </th>
             <th
               class="p-4"
@@ -133,6 +163,13 @@ exports[`<Home/> component should match snapshot 1`] = `
             >
               <span>
                 Member Site
+              </span>
+            </td>
+            <td
+              class="px-4 py-2"
+            >
+              <span>
+                1657868257983
               </span>
             </td>
             <td
@@ -172,6 +209,13 @@ exports[`<Home/> component should match snapshot 1`] = `
             <td
               class="px-4 py-2"
             >
+              <span>
+                1657868057983
+              </span>
+            </td>
+            <td
+              class="px-4 py-2"
+            >
               <label
                 class="w-14 h-7 rounded-3xl block relative p-1 ease-in-out duration-300 bg-slate-300"
               >
@@ -200,6 +244,13 @@ exports[`<Home/> component should match snapshot 1`] = `
             >
               <span>
                 Member Site
+              </span>
+            </td>
+            <td
+              class="px-4 py-2"
+            >
+              <span>
+                1657868240983
               </span>
             </td>
             <td

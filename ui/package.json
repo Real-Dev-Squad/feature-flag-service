@@ -20,6 +20,7 @@
     "build": "react-scripts build --mode=production",
     "test-watch": "react-scripts test --coverage",
     "test": "react-scripts test --watchAll=false",
+    "update-test": "react-scripts test -- -u",
     "eject": "react-scripts eject",
     "ci: lighthouse": "lhci autorun"
   },

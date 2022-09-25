@@ -26,12 +26,9 @@ exports[`<Docs/> component snapshot should match 1`] = `
     <nav
       class="px-3"
     >
-      <ul
-        role="list"
-      >
+      <ul>
         <li
           class="text-blue-600 hover:underline text-sm py-1"
-          role="listitem"
         >
           <a
             aria-current="page"
@@ -40,11 +37,9 @@ exports[`<Docs/> component snapshot should match 1`] = `
           >
             Home
           </a>
-           
         </li>
         <li
           class="text-blue-600 hover:underline text-sm py-1"
-          role="listitem"
         >
           <a
             class=""
@@ -52,11 +47,9 @@ exports[`<Docs/> component snapshot should match 1`] = `
           >
             Create Users
           </a>
-           
         </li>
         <li
           class="text-blue-600 hover:underline text-sm py-1"
-          role="listitem"
         >
           <a
             class=""
@@ -64,23 +57,19 @@ exports[`<Docs/> component snapshot should match 1`] = `
           >
             Flags
           </a>
-           
         </li>
         <li
           class="text-blue-600 hover:underline text-sm py-1"
-          role="listitem"
         >
           <a
             class=""
-            href="/sdk"
+            href="/SDK"
           >
             SDK
           </a>
-           
         </li>
         <li
           class="text-blue-600 hover:underline text-sm py-1"
-          role="listitem"
         >
           <a
             class=""
@@ -88,7 +77,6 @@ exports[`<Docs/> component snapshot should match 1`] = `
           >
             Docs
           </a>
-           
         </li>
       </ul>
     </nav>

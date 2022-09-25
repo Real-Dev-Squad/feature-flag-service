@@ -28,7 +28,8 @@ export const NAV = [
     {
         name: "SDK",
         path:  "/SDK",
-        element: <Sdk />
+        element: <Sdk />,
+        visible: true
     },
     {
         name: "Docs",
