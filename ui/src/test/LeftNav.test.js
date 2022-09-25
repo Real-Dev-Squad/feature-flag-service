@@ -3,9 +3,6 @@ import { MemoryRouter as Router } from 'react-router-dom';
 import Navigation from '../Components/Navigation/Navigation';
 
 describe('<Navigation/> component', () => {
-    it('component should render',() => {
-        render(<Router><Navigation /></Router>);
-    });
     it('should have UL',() => {
         render(<Router><Navigation /></Router>);
         const element = screen.getByRole('list');
