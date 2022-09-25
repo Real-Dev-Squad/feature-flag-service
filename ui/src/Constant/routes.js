@@ -9,18 +9,21 @@ export const NAV = [
     {
         name: 'Home',
         path: '/',
-        element: <Home />
+        element: <Home />,
+        visible: true
     },
     {
         name: "Create Users",
         path:  "/users",
-        element:  <Users />
+        element:  <Users />,
+        visible: true
 
     },
     {
         name: "Flags",
         path:  "/flags",
-        element: <Flags />
+        element: <Flags />,
+        visible: true
     },
     {
         name: "SDK",
@@ -30,10 +33,12 @@ export const NAV = [
     {
         name: "Docs",
         path:  "/docs",
-        element: <Docs />
+        element: <Docs />,
+        visible: true
     },
     {
         path: "*",
-        element: <NotFound />
+        element: <NotFound />,
+        visible: false
     }
 ]
