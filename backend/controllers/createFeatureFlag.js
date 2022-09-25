@@ -1,17 +1,12 @@
-const FeatureFlagModel = require('../models/FeatureFlag');
+const { dynamoClient, TABLE_NAME }  = require('../db/dynamo');
 
 /* Create Feature Flag */
-const createFeatureFlag = async (req, res) => { 
-    try{
-        if(req.body !== undefined){
-            const feature = new FeatureFlagModel(req.body);
-            feature.save(); 
-            res.send();
-        }
-    }
-    catch(err){
-        res.send(err)
-    }
+const createFeatureFlag = async () => { 
+    const params = {
+        TableName : TABLE_NAME,
+        Flag: flags 
+    };
+    return await dynamoClient.put(params).promise();
 }
 
 module.exports = createFeatureFlag;

@@ -1,18 +1,12 @@
-const FeatureFlagModel = require('../models/FeatureFlag');
-
 /* Edit Feature Flag */
 const deleteFeatureFlag = async (req, res) => {
-    try{
-        const { id } = req.params;
-        
-        if(id !== undefined){
-            const deleteRecord = await FeatureFlagModel.findByIdAndRemove(id);
-            res.send(deleteRecord);
+    const params = {
+        TableName : TABLE_NAME,
+        key : {
+            flagname
         }
-    }
-    catch(err){
-       console.log(err)
-    }
+    };
+    return await dynamoClient.delete(params).promise();
 }
 
 module.exports = deleteFeatureFlag;

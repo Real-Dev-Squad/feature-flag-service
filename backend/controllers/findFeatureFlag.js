@@ -1,21 +1,12 @@
-const FeatureFlagModel = require('../models/FeatureFlag');
-
 /* FIND Feature Flag */
 const findFeatureFlag = async (req, res) => {
-    const { flagName } = req.params;
-  try{
-    FeatureFlagModel.findOne({name : flagName}, function(err, flag) {
-      if(flag === null){
-        res.status(404).json("404");
-        return false;
-      }
-        res.json(flag);
-        res.send();
-   });
-  }
-  catch(err){
-    res.send(err);
-  }
+    const params = {
+        TableName : TABLE_NAME,
+    };
+    console.log(params)
+    const flags =  await dynamoClient.scan(params).promise();
+    console.log(flags);
+    return flags;
 }
 
 module.exports = findFeatureFlag;
