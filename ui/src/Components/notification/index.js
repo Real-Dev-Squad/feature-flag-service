@@ -1,12 +1,12 @@
 import { NOTIFICATION_TEXT_COLOR } from "../../Constant/constant";
 import { useNotificationContext } from "../../Context/NotificationContext";
 
-const NotificationParent = () => {
+const NotificationContainer = () => {
   const { notificationQueue } = useNotificationContext();
 
   return (
     <div
-      data-testid="notificationparent"
+      data-testid="notificationcontainer"
       className="flex justify-center items-center flex-col-reverse fixed top-4 w-max gap-2 transition-[height] duration-300 ease-[cubic-bezier(0.165, 0.84, 0.44, 1)]"
       //this piece of code will increase or decrease the height of the wrapper accr to the no. of notifications present
       style={{ height: `${notificationQueue.length * 2.5}rem` }}
@@ -29,4 +29,4 @@ const NotificationParent = () => {
   );
 };
 
-export default NotificationParent;
+export default NotificationContainer;
