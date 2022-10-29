@@ -1,3 +1,4 @@
+/* eslint-disable no-prototype-builtins */
 import { TABLE } from "../Constant/constant";
 
 export function camelCaseToNormal(string) {
