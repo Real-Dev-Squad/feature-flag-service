@@ -11,7 +11,7 @@ export default function Header({ user }) {
       />
 
       <h1 className='text-lg'>
-        {user.github_display_name}
+      {user.github_display_name}
       </h1>
 
       <Button

@@ -11,6 +11,7 @@
     "eslint": "^8.17.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -19,6 +20,7 @@
     "build": "react-scripts build --mode=production",
     "test-watch": "react-scripts test --coverage",
     "test": "react-scripts test --watchAll=false",
+    "update-test": "react-scripts test -- -u",
     "eject": "react-scripts eject",
     "ci: lighthouse": "lhci autorun"
   },

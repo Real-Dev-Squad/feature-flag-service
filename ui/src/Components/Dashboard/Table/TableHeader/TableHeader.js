@@ -1,4 +1,3 @@
-import PreviousMap from "postcss/lib/previous-map";
 import { camelCaseToNormal } from "../../../../Utils/helpers";
 import SortCursor from "./SortCursor";
 import { TABLE } from "../../../../Constant/constant";
